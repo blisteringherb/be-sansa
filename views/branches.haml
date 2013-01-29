@@ -1,0 +1,11 @@
+
+%li{:id =>'branch', :style=>'display:none'}
+  %label{:for => "branch"} Branch to deploy:
+  %select{:name => "branch"}
+    %option{:value => {{branch}}}= {{branch}}
+%li{:style=>'display:none'}
+  %label{:for => "environment"} Environment:
+  %select{:name => "environment"}
+    %option{:value => 'qa1'} QA 1
+    %option{:value => 'qa2'} QA 2
+%input{:type => "submit", :value => "Deploy it!"}

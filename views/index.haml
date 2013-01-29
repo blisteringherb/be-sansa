@@ -1,0 +1,22 @@
+%div{:id => "header"}
+  %h1= @title
+%p{:class => 'flash'}
+%form{:method => 'post', :name => 'deploy'}
+  %fieldset
+    %ol
+    %li
+      %label{:for => "project"} Project:
+      %select{:name => "project"}
+        %option= "Please make a selection"
+        - @platforms.each do |project|
+          %option{:value => project.first}= project.first
+    %li{:id => 'branch', :style=>'display:none'}
+      %label{:for => "branch"} Branch to deploy:
+      %select{:name => "branch"}
+        %option{:value => "{{name}}"}= "{{name}}"
+    %li{:id => 'environment', :style=>'display:none'}
+      %label{:for => "environment"} Environment:
+      %select{:name => "environment"}
+        %option{:value => 'qa1'} QA 1
+        %option{:value => 'qa2'} QA 2
+    %input{:type => "submit", :value => "Deploy it!", :style=>'display:none'}

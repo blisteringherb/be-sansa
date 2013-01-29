@@ -1,0 +1,6 @@
+>> Writing PID to tmp/pids/thin-production.3022.pid
+/var/www/deployapp/app.rb:22: warning: already initialized constant AuthPolicy
+>> Thin web server (v1.5.0 codename Knife)
+>> Maximum connections set to 1024
+>> Listening on localhost:3022, CTRL+C to stop
+>> Exiting!
